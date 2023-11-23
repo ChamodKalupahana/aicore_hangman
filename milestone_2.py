@@ -13,3 +13,11 @@ word = random.choice(word_list)
 # Ask for user input
 
 guess = str(input('Enter single letter: '))
+
+# Check input is a single character
+
+if len(guess) == 1 and guess.isalpha():
+    print('Good guess!')
+
+else:
+    print('Oops! That is not a valid input.')
