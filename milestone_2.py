@@ -6,7 +6,10 @@ import random
 
 word_list = ['apple', 'grapes', 'banana', 'blueberries', 'strawberries']
 
-# Create instance of random.choice
+# Select random item from list
 
-random_chooser = random.choice(word_list)
-print(random_chooser)
+word = random.choice(word_list)
+
+# Ask for user input
+
+guess = str(input('Enter single letter: '))
