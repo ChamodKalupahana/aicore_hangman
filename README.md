@@ -42,5 +42,3 @@ Your feedback and suggestions are highly appreciated.
 ## 📄 License
 
 This project is licensed under the AiCore and MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-
