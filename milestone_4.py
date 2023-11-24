@@ -7,7 +7,7 @@ import random
 class Hangman():
     def __init__(self, word_list, num_lives = 5):
         self.word_list = word_list
-        
+
         #The number of lives the player has at the start of the game.
         self.num_lives = num_lives
 
@@ -20,10 +20,38 @@ class Hangman():
         # The number of UNIQUE letters in the word that have not been guessed yet
         self.num_letters = len(set(self.word))
 
+        # A list of the guesses that have been tried. Will be appended to as game plays
+        self.list_of_guesses = []
+
+    def check_guess(self, guess):
+        # check guess letter is in word
+        if guess in self.word:
+            print('Good guess! {guess} is in the word.'.format(guess = guess))
+
+        else:
+            print('Sorry, {guess} is not in the word. Try again'.format(guess = guess))
+    
+    def ask_for_input(self):
+        while True:
+            guess = str(input('Enter single letter: '))
+            guess = guess.lower()
+
+            # Check input is a single character and letter
+            if len(guess) != 1 or guess.isalpha() == False:
+                # print and go back to start
+                print('Invalid letter. Please, enter a single alphabetical character.')
+
+            elif guess in self.list_of_guesses:
+                print("You already tried that letter!")
+
+            else:
+                self.check_guess(guess)
+                self.list_of_guesses.append(guess)
+
 # Define list of 5 favourite fruits
 word_list = ['apple', 'grapes', 'banana', 'blueberries', 'strawberries']
 
 
 test = Hangman(word_list)
-print(test.word)
-print(test.num_letters)
+
+test.ask_for_input()
