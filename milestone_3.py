@@ -1,14 +1,28 @@
 """
-Ask for the user for a valid input continuously
+Ask for the user for a valid input continuously for hangman
 """
+
+# Import modules
+import random
+
+# Define list of 5 favourite fruits
+word_list = ['apple', 'grapes', 'banana', 'blueberries', 'strawberries']
+
+# Select random item from list
+word = random.choice(word_list)
 
 while True: # Create a continuous while loop
     guess = str(input('Enter single letter: '))
 
     # Check input is a single character and letter
     if len(guess) == 1 and guess.isalpha():
-        # break out of loop
-        break
+        
+        # check guess letter is in word
+        if guess in word:
+            print('Good guess! {guess} is in the word.'.format(guess = guess))
+
+        else:
+            print('Sorry, {guess} is not in the word. Try again'.format(guess = guess))
 
     else:
         # print and go back to start
