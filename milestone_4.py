@@ -36,6 +36,9 @@ class Hangman():
 
         else:
             print('Sorry, {guess} is not in the word. Try again'.format(guess = guess))
+
+            self.num_lives -= 1
+            print('You have {num_lives} lives left.'.format(num_lives = self.num_lives))
     
     def ask_for_input(self):
         while True:
