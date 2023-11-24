@@ -28,6 +28,12 @@ class Hangman():
         if guess in self.word:
             print('Good guess! {guess} is in the word.'.format(guess = guess))
 
+            for letter_index in range(len(self.word)):
+                if guess == self.word[letter_index]:
+                    self.word_guessed[letter_index] = guess
+            
+            self.num_letters -= 1
+
         else:
             print('Sorry, {guess} is not in the word. Try again'.format(guess = guess))
     
