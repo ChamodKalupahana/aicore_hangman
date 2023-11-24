@@ -4,6 +4,8 @@
 
 Welcome to the Hangman Game! This simple Python program lets you play the classic game of Hangman in the command line.
 
+This repo also contains milestone python files for slowly creating the input and checking input functions for the hangman game.
+
 ## How to Play
 
 1. Clone the repository to your local machine.
