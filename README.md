@@ -1,4 +1,4 @@
-# AiCore Hangman
+# 🚀 AiCore Hangman
 
 ![Alt text](image_hangman.png)
 
@@ -6,7 +6,7 @@ Welcome to the Hangman Game! This simple Python program lets you play the classi
 
 This repo also contains milestone python files for slowly creating the input and checking input functions for the hangman game.
 
-## How to Play
+## 🏁 How to Play
 
 1. Clone the repository to your local machine.
    ```bash
@@ -15,32 +15,32 @@ This repo also contains milestone python files for slowly creating the input and
 
 2. Navigate to the project directory.
    ```bash
-   cd hangman-game
+   cd aicore_hangman
    ```
 
 3. Run the game.
    ```bash
-   python hangman.py
+   python milestone_4.py
    ```
 
-4. Follow the on-screen instructions to guess the hidden word and save the stick figure from being hanged!
+4. Follow the on-screen instructions to guess the hidden word and before you run out of lives!
 
-## Features
+## ✨ Features
 
 - Randomly selected words for a unique gaming experience.
-- Interactive and user-friendly interface.
-- Keeps track of your wins and losses.
+- Fast and optimised game
+- Built using classes and objects
 
-## Requirements
+## 🙌 Requirements
 
 - Python 3.x
 
-## Contribution
+## 🤝  Contribution
 
 Your feedback and suggestions are highly appreciated.
 
-## License
+## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the AiCore and MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 
