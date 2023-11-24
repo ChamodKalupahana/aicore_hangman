@@ -34,7 +34,7 @@ word_list = ['apple', 'grapes', 'banana', 'blueberries', 'strawberries']
 # Select random item from list
 word = random.choice(word_list)
 
-
-while True: # Create a continuous while loop
+# Create a continuous while loop
+while True:
     ask_for_input()
         
