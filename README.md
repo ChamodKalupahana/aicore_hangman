@@ -1,6 +1,9 @@
 # 🚀 AiCore Hangman
 
-![Alt text](image_hangman.png)
+<img src="aicore_logo.jpg" width="100"/>
+
+<img src="image_hangman.png"  width="600"/>
+
 
 Welcome to the Hangman Game! This simple Python program lets you play the classic game of Hangman in the command line.
 
