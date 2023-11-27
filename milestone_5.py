@@ -7,7 +7,7 @@ import random
 class Hangman():
     """
     The Hangman class represents a simple implementation of the classic Hangman game.
-    Use ask_for_input() method to start the game
+    Use ask_for_input() method to start the game once
 
     Attributes:
         - word_list (list): List of words for the Hangman game to randomly choose from.
@@ -68,38 +68,57 @@ class Hangman():
     def ask_for_input(self):
         """Ask the player for a single letter as input.
 
-        Continuously prompts the player for input until a valid letter is provided.
+        Prompts the player for input until a valid letter is provided.
 
         Args:
             None
         Returns:
             None
         """
-        while True:
-            guess = str(input('Enter single letter: '))
-            guess = guess.lower()
+        #while True: move while loop to play game function
+        guess = str(input('Enter single letter: '))
+        guess = guess.lower()
 
-            # Check input is a single character and letter
-            if len(guess) != 1 or guess.isalpha() == False:
-                # print and go back to start
-                print('Invalid letter. Please, enter a single alphabetical character.')
+        # Check input is a single character and letter
+        if len(guess) != 1 or guess.isalpha() == False:
+            # print and go back to start
+            print('Invalid letter. Please, enter a single alphabetical character.')
 
-            # Check if the letter has already been guessed.
-            elif guess in self.list_of_guesses:
-                print("You already tried that letter!")
+        # Check if the letter has already been guessed.
+        elif guess in self.list_of_guesses:
+            print("You already tried that letter!")
 
-            else:
-                # Call the check_guess method with the player's guess.
-                self.check_guess(guess)
+        else:
+            # Call the check_guess method with the player's guess.
+            self.check_guess(guess)
 
-                # Add the guess to the list of guesses.
-                self.list_of_guesses.append(guess)
+            # Add the guess to the list of guesses.
+            self.list_of_guesses.append(guess)
+
+
+def play_game(word_list):
+    # Define number of lives
+    num_lives = 5
+
+    # Create instance of Hangman class
+    game = Hangman(word_list, num_lives)
+
+    while True:
+        # Check if user has run out of lives
+        if game.num_lives == 0:
+            print('You lost!')
+            break
+        
+        # Continue playing if there are more letters to guess
+        if game.num_letters > 0:
+            game.ask_for_input()
+        
+        else:
+            print('Congratulations. You won the game!')
+            break
+
 
 # Define list of 5 favourite fruits
 word_list = ['apple', 'grapes', 'banana', 'blueberries', 'strawberries']
 
-# Create instance of Hangman class
-test = Hangman(word_list)
-
-# Start game
-test.ask_for_input()
+play_game(word_list)
